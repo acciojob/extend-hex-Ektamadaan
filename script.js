@@ -1,5 +1,8 @@
 const extendHex = (shortHex) => {
   // write your code here
+	if (shortHex.length !== 4 || shortHex[0] !== '#') {
+        throw new Error("Invalid short hex code format. Please provide a valid short hex code.");
+    }
 	const r = shortHex[1];
 	const g = shortHex[2];
 	const b = shortHex[3];
@@ -9,5 +12,5 @@ const extendHex = (shortHex) => {
 };
 
 // Do not change the code below.
-const shortHex = prompt("Enter Short Hex.");
+//const shortHex = prompt("Enter Short Hex.");
 alert(extendHex(shortHex));
